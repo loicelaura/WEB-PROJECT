@@ -1,5 +1,5 @@
 
-body, h1, h2, h3, p, ul, li, form, input, textarea, button {
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,6 +11,9 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Header styles */
@@ -20,13 +23,15 @@ header {
     background-color: #333;
     color: #fff;
     padding: 1rem 2rem;
+    text-align: center;
 }
 
 header .logo h1 {
     text-align: center;
+    margin: 0;
+    font-size: 1.5rem;
 }
-
-header nav ul {
+ nav ul {
     display:inline-block;
     display: flex;
     list-style: none;
@@ -51,110 +56,148 @@ header nav ul li a:hover {
 
 /* Main content styles */
 main {
-    padding: 2rem;
+    padding: 20px;
+    flex: 1;
 }
 
-/* Section styles */
-section {
-    margin-bottom: 2rem;
-    padding: 2rem;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+#home {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-section h2 {
-    margin-bottom: 1rem;
-    color: #333;
+#home  h2 {
+    margin-bottom: 10px;
 }
 
-section p {
-    margin-bottom: 1rem;
+#home p {
+    margin-bottom: 20px;
 }
 
-/* Button styles */
-button {
-    display: inline-block;
-    padding: 0.5rem 1rem;
+#home button {
+    background-color: #f4f4f4;
     color: #fff;
-    background-color: #333;
     border: none;
-    border-radius: 4px;
+    padding: 10px 20px;
     cursor: pointer;
+    border-radius: 5px;
+}
+/* Slide Styling*/
+#slides {
+    position: relative;
 }
 
-button:hover {
-    background-color: #555;
+.slide {
+    display: none;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
 }
 
-/* Form styles */
-form {
-    margin-top: 1rem;
-}
-
-form label {
+.slide.active {
     display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
 }
 
-form input, form textarea {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.navigation {
+    text-align: center;
+    margin-top: 20px;
 }
-
-form button {
-    width: 100%;
-    padding: 0.75rem;
-    background-color: #333;
+.navigation button {
+    background-color: #354243;
     color: #fff;
     border: none;
-    border-radius: 4px;
+    padding: 10px 15px;
     cursor: pointer;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+.navigation  button :hover {
+    background-color: 3c5962;
+
+}
+/*Dashboard Section Styling*/
+#dashboard {
+    margin-top: 40px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#dashboard h2 {
+    margin-bottom: 20px;
 }
 
-form button:hover {
-    background-color: #555;
+#dashboard button {
+    background-color: #35424a;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px;
+
 }
 
-/* Footer styles */
+#dashboard button:hover {
+    background-color: #354243;
+}
+
+#dashboard div {
+    margin-bottom: 20px;
+}
+
+#dashboard div p {
+    margin-bottom: 10px;
+}
+
+#dashboard form {
+    display: flex;
+    flex-direction: column;
+}
+
+#dashboard form label {
+    margin-bottom: 5px;
+}
+
+#dashboard form input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#dashboard form button {
+    background-color: #35424a;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#dashboard form button:hover {
+    background-color: #354243;
+}
+/*Footer Styling*/
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
-footer .quick-links, footer .contact-info, footer .offices {
-    margin-bottom: 1rem;
+footer p {
+    margin: 5px 0;
 }
 
-footer .quick-links a {
+footer a {
     color: #fff;
     text-decoration: none;
-    margin: 0 0.5rem;
 }
 
-footer .quick-links a:hover {
+footer a:hover {
     text-decoration: underline;
-}
-
-footer .contact-info p, footer .offices p {
-    margin: 0.5rem 0;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    header nav ul {
-        text-align: left;
-        padding: 0;
-    }
-
-    header nav ul li {
-        display: block;
-        margin: 0.5rem 0;
-    }
 }
